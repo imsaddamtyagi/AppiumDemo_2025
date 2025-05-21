@@ -18,8 +18,7 @@ import io.appium.java_client.android.options.UiAutomator2Options;
 public class MyFirstTest 
 {
 	
-	String Name = "//android.widget.EditText[@resource-id=\"com.bitbar.testdroid:id/editText1\"]";
-	String Answer = "//android.widget.Button[@resource-id=\"com.bitbar.testdroid:id/button1\"]";
+	String GitLink =   "new UiSelector().description(\"Visit My GitHub Profile\")";
 
     AppiumDriver driver;
 	
@@ -30,11 +29,11 @@ public class MyFirstTest
     	   UiAutomator2Options options = new UiAutomator2Options();
     	   
     	   options.setPlatformName("Android");
-    	   options.setPlatformVersion("14");
+    	   options.setPlatformVersion("15");
     	   options.setDeviceName("192.0.0.2:5555");
     	   options.setAutomationName("UiAutomator2");
-    	   options.setAppPackage("com.nucleus.sk.sk_mobile_app");
-    	   options.setAppActivity("com.nucleus.sk.sk_mobile_app.MainActivity");
+    	   options.setAppPackage("com.example.app");
+    	   options.setAppActivity("com.example.app.MainActivity");
     	   options.setNoReset(true);
 
 	        URI uri = new URI("http://127.0.0.1:4723/");        	
@@ -44,11 +43,11 @@ public class MyFirstTest
 	 
      
      @Test
-     public void MyFirstTest_Appium()
+     public void MyFirstTest_Appium() throws InterruptedException
      {
     	 
-    	 doSend(driver,Name,"Husain Tyagi");
-    	 doClick(driver,Answer);
+    	 Thread.sleep(5000);
+    	 doClick(driver,GitLink);
        
     
     	 }
