@@ -1,17 +1,17 @@
 package com.qa.tests;
 
-import java.net.MalformedURLException;
 import java.net.URI;
-import java.net.URISyntaxException;
 import java.time.Duration;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import java.net.URISyntaxException;
 import io.appium.java_client.AppiumBy;
+import org.openqa.selenium.WebElement;
+import java.net.MalformedURLException;
+import org.testng.annotations.BeforeTest;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import io.appium.java_client.android.options.UiAutomator2Options;
 
 
@@ -30,7 +30,8 @@ public class MyFirstTest
     	   
     	   options.setPlatformName("Android");
     	   options.setPlatformVersion("15");
-    	   options.setDeviceName("192.0.0.2:5555");
+    	   options.setDeviceName("100.64.0.1:5555"); // Mobile local Address
+    	 //  options.setDeviceName("192.168.1.8:5555"); // Over wifi
     	   options.setAutomationName("UiAutomator2");
     	   options.setAppPackage("com.example.app");
     	   options.setAppActivity("com.example.app.MainActivity");
