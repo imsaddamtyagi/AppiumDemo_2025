@@ -30,16 +30,15 @@ public class MyFirstTest
     	   
     	   options.setPlatformName("Android");
     	   options.setPlatformVersion("15");
-    	   options.setDeviceName("100.64.0.1:5555"); // Mobile local Address
-    	 //  options.setDeviceName("192.168.1.8:5555"); // Over wifi
+    	   options.setDeviceName("100.64.0.1:5555");   // Mobile local Address
+    	 //options.setDeviceName("192.168.1.8:5555"); // Over WiFi Connection
     	   options.setAutomationName("UiAutomator2");
     	   options.setAppPackage("com.example.app");
     	   options.setAppActivity("com.example.app.MainActivity");
     	   options.setNoReset(true);
 
-	        URI uri = new URI("http://127.0.0.1:4723/");        	
-	        driver = new AndroidDriver(uri.toURL(), options);     
-	        	
+	        URI uri = new URI("http://127.0.0.1:4723/");    // Appium Server Address    	
+	        driver = new AndroidDriver(uri.toURL(), options);     	               	
 	   }
 	 
      
