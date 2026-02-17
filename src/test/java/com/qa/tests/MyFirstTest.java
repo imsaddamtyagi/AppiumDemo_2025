@@ -45,36 +45,24 @@ public class MyFirstTest
      @Test
      public void MyFirstTest_Appium() throws InterruptedException
      {
-    	 
     	 Thread.sleep(5000);
     	 doClick(driver,GitLink);
-       
-    
-    	 }
+     }
      
-     
-     
-     
-     
+         
      public static   void doClick(AppiumDriver driver, String locator)
-     { 
-    	 
+     {   	 
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     WebElement elem = wait.until(ExpectedConditions.visibilityOfElementLocated(AppiumBy.androidUIAutomator(locator))); 
-    elem.click();
- 
-    
+    elem.click();   
      }
      
      
      public static   void doSend(AppiumDriver driver, String locator,String value)
-     { 
-    	 
+     {   	 
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     WebElement elem = wait.until(ExpectedConditions.visibilityOfElementLocated(AppiumBy.androidUIAutomator(locator))); 
-    elem.sendKeys(value);
- 
-    
+    elem.sendKeys(value);    
      }
      
      
